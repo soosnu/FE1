@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>타이틀</title>
+  <link rel="stylesheet" id="reset-css" href="reset.css" type="text/css">
+  <style>
+    .txt_blue{color : skyblue}
+    .txt_red{color : red}
+    .wrap_name::after{
+      display: block;
+      clear: both;
+      content: '';
+    }
+    .list_name{
+      border: 6px solid #333;
+      padding : 3px;
+      width : 300px;
+      box-sizing : border-box;
+      float : left;
+    }
+    .list_name .txt_item{
+      font-size : 20px;
+      font-weight : 600;
+    }
+    .box_test{
+      height: 400px;
+      background-color: seagreen;
+    }
+    .wrap_position .box_item{
+      border: 2px solid darkblue;
+      width : 500px;
+      height: 250px;
+    }
+    .wrap_position{
+      background-color:lightcyan;
+      position: relative;
+      height : 500px;
+    }
+    .wrap_position .box_item.box_absolute{
+      background-color: dodgerblue;
+      position: absolute;
+      left : 50px;
+      right : 50px;
+      top : 50px;
+      width : auto;
+    }
+    .wrap_position .box_item.box_fixed{
+      background-color: gold;
+      position: fixed;
+      top : 0;
+      left : 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap_name">
+    <ul class="list_name">
+      <li>에드워드 나이는 <span class="txt_item txt_blue">37</span>살</li>
+      <li>루나</li>
+      <li>빅터</li>
+    </ul>
+    <ul class="list_name">
+      <li>에드워드 나이는 <span class="txt_item txt_red">37</span>살</li>
+      <li>루나</li>
+      <li>빅터</li>
+    </ul>
+  </div>
+  <div class="box_test">
+    테스트 테스트 테스트 테스트 테스트 테스트테스트 테스트 테스트테스트 테스트 테스트테스트 테스트 테스트테스트 테스트 테스트테스트 테스트 테스트테스트 테스트 테스트테스트 테스트 테스트테스트 테스트 테스트테스트 테스트 테스트테스트 테스트 테스트
+  </div>
+  <div class="wrap_position">
+    <div class="box_item box_absolute">테스트 루나 </div>
+    <div class="box_item box_fixed">테스트 빅터 </div>
+  </div>
+  <script>
+
+  </script>
+</body>
+</html>

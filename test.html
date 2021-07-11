@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>레이아웃 잡기</title>
+  <style>
+    .wrap_container{
+      width : 1000px;
+      background-color: darkslategrey;
+      margin: 0 auto;
+    }
+    .top_container{
+      width: 700px;
+      height: 100px;
+      background-color: darkturquoise;
+    }
+    .nav{
+      background-color:deepskyblue;
+      height :  50px;
+      margin : 10px 0;
+    }
+    .mid_container{
+      background-color: lightseagreen;
+      margin : 10px 0;
+      width : 1000px;
+      position: relative;
+    }
+    .mid_container::after{
+      display: block;
+      clear: both;
+      content: '';
+    }
+    .mid_container .left_container{
+      background-color: lightskyblue;
+      width : 650px;
+      margin : 10px;
+      float : left;
+    }
+    .mid_container .right_container{
+      background-color:mediumaquamarine;
+      width : 300px;
+      left : 700px;
+      margin : 10px;
+      float : right;
+    }
+    .left_container, .right_container{
+
+    }
+    .left_top_box, .left_mid_box, .left_bot_box{
+      margin : 10px;
+      background-color: darkslategrey;
+    }
+    .left_container .left_top_box{
+      height : 60px;
+    }
+    .left_container .left_mid_box{
+      height : 120px;
+    }
+    .left_container .left_bot_box{
+      height : 120px;
+    }
+    .left_mid_box .mid_box1, .left_mid_box .mid_box2{
+      float : left;
+      width : 45%;
+      height : 100px;
+      margin  :  10px;
+      background-color: deepskyblue;
+    }
+    .right_top_box, .right_mid_box, .right_bot_box{
+      margin: 10px;
+      height : 100px;
+      background-color: darkslategrey;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="wrap_container">
+    container
+    <div class="top_container">
+      top_container
+    </div>
+    <div class="nav">
+      nav
+    </div>
+    <div class="mid_container">
+      
+      <div class="left_container">
+          left_container
+          <div class="left_top_box">
+            top 
+          </div>
+          <div class="left_mid_box">
+             
+            <div class="mid_box1"> 
+              1
+            </div>
+            <div class="mid_box2">
+              2
+            </div>
+          </div>
+          <div class="left_bot_box">
+            bot
+          </div>
+      </div>
+      <div class="right_container">
+          right_container
+          <div class="right_top_box">
+            top
+          </div>
+          <div class="right_mid_box">
+            mid
+          </div>
+          <div class="right_bot_box">
+            bot
+          </div>
+      </div>
+    </div>
+
+  </div>  
+</body>
+</html>
